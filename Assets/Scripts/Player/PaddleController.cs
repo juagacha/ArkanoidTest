@@ -4,14 +4,16 @@ using UnityEngine.InputSystem;
 public class PaddleController : MonoBehaviour
 {
     PlayerInput playerInput;
-    public int paddleSpeed = 5; //velocidad del paddle
+    [SerializeField]  private float paddleSpeed = 7f; //velocidad del paddle
     private Vector2 inputs;
-    public int zPosition; // cambia en 3d 
+    public float yPosition; // cambia en 3d niveles superiores
     private Vector3 startPosition = new Vector3(0, 0, -13f); // posicion inicial
 
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+        //playerInput = GetComponentInParent<PlayerInput>();
+        if (playerInput == null) { Debug.LogError("PlayerInput not found!"); }
         transform.position = startPosition;
     }
 
@@ -26,4 +28,11 @@ public class PaddleController : MonoBehaviour
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, -26f, 26f), transform.position.y, transform.position.z);
         }
     }
+
+    //metodo que cambia en z el paddle
+    /*public void ChangeY() 
+    {
+        Vector3 movement = new Vector3(0, 0, yPosition);
+        transform.Translate(movement);
+    }*/
 }
