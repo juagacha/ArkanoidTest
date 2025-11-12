@@ -4905,7 +4905,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 489e95e590889d04b91c615d5e5c126c, type: 2}
+  - {fileID: 2100000, guid: f48ec4973c92392479d5e2c6caed3f0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4967,3 +4967,6 @@ MonoBehaviour:
   hitTothisObject: 0
   breakParticle: {fileID: 5014673252708490229}
   breakBoxParticle: {fileID: 5014673252708490229}
+  sfxGlassBoxDestroy: {fileID: 8300000, guid: f91de1280c42f4040826e0d8bfa60b0b, type: 3}
+  sfxBrickBoxDestroy: {fileID: 8300000, guid: f56edc9c583fe134fbba2d92c65a72b0, type: 3}
+  LevelController: {fileID: 0}

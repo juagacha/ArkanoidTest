@@ -71,7 +71,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 489e95e590889d04b91c615d5e5c126c, type: 2}
+  - {fileID: 2100000, guid: f48ec4973c92392479d5e2c6caed3f0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,6 +133,9 @@ MonoBehaviour:
   hitTothisObject: 0
   breakParticle: {fileID: 7202359279796950852}
   breakBoxParticle: {fileID: 6826074579749034427}
+  sfxGlassBoxDestroy: {fileID: 8300000, guid: f91de1280c42f4040826e0d8bfa60b0b, type: 3}
+  sfxBrickBoxDestroy: {fileID: 8300000, guid: f56edc9c583fe134fbba2d92c65a72b0, type: 3}
+  LevelController: {fileID: 0}
 --- !u!1 &3416337210066799276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,8 +5000,8 @@ Transform:
   m_GameObject: {fileID: 3946613997845292193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 2.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2454919572656971244}

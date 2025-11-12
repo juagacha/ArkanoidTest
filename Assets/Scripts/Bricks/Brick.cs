@@ -15,9 +15,10 @@ public class Brick : ScriptableObject // clase de todos los ladrillos
     public GameObject brickprefab;
     public int pointsToAdd;
     public int hitToDestroy;
+    public AudioClip sfxDestroy;
     
 
-    /*public void SumPoints( int marcador)
+    /*public void SumPoints(int marcador)
     {
         marcador += pointsToAdd;
     }*/

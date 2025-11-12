@@ -13,8 +13,9 @@ public class PausePanel : MonoBehaviour
 
     public void GoStartPanel()
     {
+        pausePanel.SetActive(false);
         startPanel.SetActive(true);
+        GameManager.Instance.newGame = true;
         GameManager.Instance.SetGameOver();
-        AudioManager.Instance.StopMusic();
     }
 }

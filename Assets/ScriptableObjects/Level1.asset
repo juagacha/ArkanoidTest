@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: Assembly-CSharp::LevelClass
   levelName: Nivel 1
+  levelLevel: 1
   maxPoints: 0
   percentComplete: 0
   numberOfPlate: 0

@@ -5,6 +5,7 @@ public class StartPanel : MonoBehaviour
 {
     [SerializeField] private GameObject LevelPannel; //panel niveles
     [SerializeField] private AudioClip audioBGS; //audio de la escena
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,6 +13,11 @@ public class StartPanel : MonoBehaviour
         if (audioBGS != null) 
         {
             AudioManager.Instance.PlayMusic(audioBGS);
+        }
+
+        if (GameManager.Instance.newGame) 
+        {
+            GameManager.Instance.newGame = false;
         }
         
     }
@@ -21,7 +27,7 @@ public class StartPanel : MonoBehaviour
         AudioManager.Instance.PlayEndMusic(audioBGS);
     }
 
-    public void GoLevelPanel()
+    public void GoLevelPanel() // va al panel de niveles
     {
         LevelPannel.SetActive(true);
         this.gameObject.SetActive(false);

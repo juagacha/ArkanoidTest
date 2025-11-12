@@ -27,6 +27,7 @@ public class GamePanel : MonoBehaviour
         livesActives[live].SetActive(false);   
     }
 
+
     public void SetLevelName(string name) 
     {
         textNameLevel.text = name;
@@ -34,6 +35,7 @@ public class GamePanel : MonoBehaviour
 
     public void SetPoints(int points)
     {
+        Debug.Log(points);
         textPoints.text = "Puntos: " + points;
     }
 

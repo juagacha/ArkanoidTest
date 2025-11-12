@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33c14148f204da4a8064cc510e4800e, type: 3}
   m_Name: BrickPlate
   m_EditorClassIdentifier: Assembly-CSharp::Brick
-  brickType: 0
+  brickType: 2
   brickprefab: {fileID: 696925816657295088, guid: ed664f5833d548d44a1d51137ecb3af3, type: 3}
   pointsToAdd: 5
   hitToDestroy: 3
+  sfxDestroy: {fileID: 8300000, guid: ba176bcf3cd331b4c94ab53e0022180d, type: 3}

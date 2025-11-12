@@ -8,11 +8,14 @@ public class PaddleController : MonoBehaviour
     private Vector2 inputs;
     public float yPosition; // cambia en 3d niveles superiores
     private Vector3 startPosition = new Vector3(0, 0, -13f); // posicion inicial
+    [SerializeField] private GameObject LevelController;
+    private LevelController levelcont;
 
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         if (playerInput == null) { Debug.LogError("PlayerInput not found!"); }
+        levelcont = LevelController.GetComponent<LevelController>();
         transform.position = startPosition;
     }
 
@@ -32,9 +35,14 @@ public class PaddleController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("NewLife"))
         {
+            levelcont.AddLife();
             Debug.Log("mas una vida");
         }
-
+        if (collision.gameObject.CompareTag("ExtraPoints"))
+        {
+            levelcont.AddExtraPoints(4);
+            Debug.Log("mas una vida");
+        }
     }
 
     //metodo que cambia en z el paddle

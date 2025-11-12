@@ -16,3 +16,4 @@ MonoBehaviour:
   brickprefab: {fileID: 6233115680254090659, guid: af8da9c141c0e6a4284cde9b58da239a, type: 3}
   pointsToAdd: 1
   hitToDestroy: 1
+  sfxDestroy: {fileID: 8300000, guid: ba176bcf3cd331b4c94ab53e0022180d, type: 3}

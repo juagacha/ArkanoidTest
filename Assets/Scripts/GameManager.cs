@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool isGameOver = false;
     [SerializeField] public bool isNewLife = false;
 
-    
+    public bool newGame = true;
+       
 
     private void Awake()
     {
@@ -26,16 +27,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    
-    void Update()
-    {
-        
+        if (newGame)
+        {
+            StartPannel.SetActive(true);
+        }
     }
 
     public bool GetGameActive() 
