@@ -7,6 +7,8 @@ TagManager:
   - DeathZone
   - Paddle
   - Wall
+  - NewLife
+  - Box
   layers:
   - Default
   - TransparentFX

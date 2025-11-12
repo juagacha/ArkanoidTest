@@ -23,12 +23,9 @@ public class BallController : MonoBehaviour
         if (rb == null) { Debug.LogError("Rigidbody not found!"); }
         ballIsActive = false;
         GameManager.Instance.SetNewLife(true);
-
         transform.localPosition = startPosition;
     }
-
-
-    
+        
     void Update()
     {
         Debug.Log(GameManager.Instance.GetNewLife());
@@ -45,15 +42,14 @@ public class BallController : MonoBehaviour
         {
             Vector3 directionImpact = collision.relativeVelocity;
             directionImpact = ChangeLowDirection(directionImpact);
-            directionImpact.x *= -4;
-            directionImpact.z *= 4;
+            directionImpact.x *= -2;
+            directionImpact.z *= 2;
             rb.AddForce(directionImpact, ForceMode.Impulse);
         }
 
     }
 
    
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("DeathZone"))
@@ -64,8 +60,13 @@ public class BallController : MonoBehaviour
         }
     }
 
-
-
+    private void OnCollisionExit(Collision other) 
+    {
+        //aplicar aceleracion al salir de una colision
+        var velocity = rb.linearVelocity;
+        velocity += velocity.normalized * 0.01f;
+    }
+        
 
     /// <summary>
     ///  metodo para el impulso inicial de la bola
@@ -90,11 +91,11 @@ public class BallController : MonoBehaviour
         }
     }
     /// <summary>
-    ///genera direccion de fuerza inicial aleatoria
+    ///genera direccion de fuerza inicial aleatoria por ahora fija
     /// <summary>
     private Vector3 RandominitialForce() 
     {
-        ballInitialForce = new Vector3(25f, 0f, 50f);
+        ballInitialForce = new Vector3(20f, 0f, 40f);
         return ballInitialForce;
     }
 

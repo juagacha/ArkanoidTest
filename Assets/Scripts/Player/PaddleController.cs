@@ -12,7 +12,6 @@ public class PaddleController : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        //playerInput = GetComponentInParent<PlayerInput>();
         if (playerInput == null) { Debug.LogError("PlayerInput not found!"); }
         transform.position = startPosition;
     }
@@ -27,6 +26,15 @@ public class PaddleController : MonoBehaviour
             transform.Translate(movement * Time.deltaTime * paddleSpeed);
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, -26f, 26f), transform.position.y, transform.position.z);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("NewLife"))
+        {
+            Debug.Log("mas una vida");
+        }
+
     }
 
     //metodo que cambia en z el paddle

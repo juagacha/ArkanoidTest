@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    [SerializeField] private GameObject StartPannel; //panel comienzo
 
     [Header("Controller")]
     [SerializeField] public bool isGameActive = false;
@@ -10,7 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool isGameOver = false;
     [SerializeField] public bool isNewLife = false;
 
-    [SerializeField] public int numberMaxOfLives = 3;
     
 
     private void Awake()
